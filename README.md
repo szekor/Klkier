@@ -1,2 +1,0 @@
-# Klkier
-CZYPSKO
