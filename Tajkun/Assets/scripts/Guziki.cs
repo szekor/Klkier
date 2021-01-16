@@ -1,10 +1,11 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System;
       
-      public class Guzikskrypt : MonoBehaviour
+      public class Guziki : MonoBehaviour
       {
           public Text hajstekst;
           public Text UpgradeKlikertekst;
@@ -26,6 +27,12 @@ using System;
                 UpgradeKlikertekst.text = cena.ToString();
 			   }
           
-           
-          }
+           }
+          public void ZmianScenyUpgrade(){
+          SceneManager.LoadScene("UpgradeScene");
+		  }
+     
+     
+     
+     
      }
