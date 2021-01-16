@@ -21,7 +21,7 @@ using System;
           public void UpgradeKlikera(){
 
                if(kesz >= cena){
-                kesz -= cena;
+                GameObject.Find("Scriptmanager").GetComponent<klikerScript>().kesz -= cena;
                 ZarobekPoKliku = ZarobekPoKliku * ulepszenie;
                 cena = cena * ulepszenie2;
                 hajstekst.text = "$" + kesz.ToString();

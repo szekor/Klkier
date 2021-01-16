@@ -11,7 +11,8 @@ using System;
           public double zarobekPoKliku = 1;
           public void Kliker(){    
               kesz += zarobekPoKliku;             
+          }
+          public void Update(){           
               hajstekst.text = "$" + kesz.ToString();
-
           }
   }

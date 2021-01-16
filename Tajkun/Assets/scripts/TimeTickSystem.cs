@@ -7,7 +7,7 @@ public class TimeTickSystem : MonoBehaviour
 {
   private const float TICK_TIMER_MAX =  0.2f;
   public Text liczbatickow;
-  private int tick;
+  public int tick;
   private float tickTimer; 
 
   
@@ -24,6 +24,7 @@ public class TimeTickSystem : MonoBehaviour
 		tickTimer -= TICK_TIMER_MAX;
 		tick++;
 		}
+		if (tick == 5){tick = 0;}
 		liczbatickow.text = tick.ToString();
   }
 
