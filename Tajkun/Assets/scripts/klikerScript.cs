@@ -13,6 +13,6 @@ using System;
               kesz += zarobekPoKliku;             
           }
           public void Update(){           
-              hajstekst.text = "$" + kesz.ToString();
+              hajstekst.text = "$" + Math.Round(kesz, 2).ToString();
           }
   }
