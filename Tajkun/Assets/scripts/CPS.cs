@@ -4,21 +4,16 @@ using UnityEngine;
 
 public class CPS : MonoBehaviour
 {
- double ZarobekNaSekunde = 1;
- int Tick;
- int chuj = 1;
+ public double ZarobekNaTick = 0;
+ public int Tick, tickzapisany = 0;
+
 
     void Update(){
     Tick = GameObject.Find("Scriptmanager").GetComponent<TimeTickSystem>().tick;
-    if (Tick == 4)
-    {
-        if (chuj == 1)
-        {
-        GameObject.Find("Scriptmanager").GetComponent<klikerScript>().kesz += ZarobekNaSekunde;
-        chuj = 0;
-        }
+    if (Tick > tickzapisany)
+    {   
+        GameObject.Find("Scriptmanager").GetComponent<klikerScript>().kesz += ZarobekNaTick;
+        tickzapisany = Tick;
     }
-    else if (Tick == 0)
-    chuj = 1;
-   }
+  }
 }

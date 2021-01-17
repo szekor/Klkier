@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ZmianaScenScript : MonoBehaviour
-{    public GameObject kliker, UpgradeKlikera;
+{    public GameObject kliker, UpgradeKlikera, UpgradeCPS;
      public int tak = 0;
      void Update()
      {
@@ -11,11 +11,13 @@ public class ZmianaScenScript : MonoBehaviour
         {
             kliker.SetActive (false);
             UpgradeKlikera.SetActive (true);
+            UpgradeCPS.SetActive (true);
 	     }
          if (tak == 0)
         {
             kliker.SetActive (true);
             UpgradeKlikera.SetActive (false);
+            UpgradeCPS.SetActive (false);
 	     }
     }
 

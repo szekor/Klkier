@@ -575,6 +575,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kliker: {fileID: 856009294}
   UpgradeKlikera: {fileID: 167711877}
+  UpgradeCPS: {fileID: 957542424}
   tak: 0
 --- !u!114 &653956324
 MonoBehaviour:
@@ -590,6 +591,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hajstekst: {fileID: 1482532303}
   UpgradeKlikertekst: {fileID: 1108665064}
+  UpgradeCpstext: {fileID: 1357480788}
 --- !u!114 &653956325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -616,6 +618,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a1bc6e3204cf6b4a93c06a798a7f80d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ZarobekNaTick: 0
+  Tick: 0
+  tickzapisany: 0
 --- !u!1 &688602413
 GameObject:
   m_ObjectHideFlags: 0
@@ -863,8 +868,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -365, y: 263}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -379.70996, y: 238.92914}
+  m_SizeDelta: {x: 130.58, y: 78.1418}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &957542426
 MonoBehaviour:
@@ -909,7 +914,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 957542427}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 653956324}
+        m_TargetAssemblyTypeName: UpgradeScript, Assembly-CSharp
+        m_MethodName: UpgradeCps1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &957542427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1240,7 +1257,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: $50
 --- !u!222 &1357480789
 CanvasRenderer:
   m_ObjectHideFlags: 0

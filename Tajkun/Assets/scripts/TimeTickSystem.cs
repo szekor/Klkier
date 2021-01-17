@@ -24,7 +24,6 @@ public class TimeTickSystem : MonoBehaviour
 		tickTimer -= TICK_TIMER_MAX;
 		tick++;
 		}
-		if (tick == 5){tick = 0;}
 		liczbatickow.text = tick.ToString();
   }
 

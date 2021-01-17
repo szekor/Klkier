@@ -8,9 +8,11 @@ using System;
       {
           public Text hajstekst;
           public Text UpgradeKlikertekst;
+          public Text UpgradeCpstext;
           double ulepszenie = 2;
           double ulepszenie2 = 3;
-          double cena = 10;
+          double cena1 = 10;
+          double cena2 = 50;
           double kesz;
           double ZarobekPoKliku = 1;
           public void Update()
@@ -20,12 +22,23 @@ using System;
          }
           public void UpgradeKlikera(){
 
-               if(kesz >= cena){
-                GameObject.Find("Scriptmanager").GetComponent<klikerScript>().kesz -= cena;
+               if(kesz >= cena1){
+                GameObject.Find("Scriptmanager").GetComponent<klikerScript>().kesz -= cena1;
                 ZarobekPoKliku = ZarobekPoKliku * ulepszenie;
-                cena = cena * ulepszenie2;
+                cena1 = cena1 * ulepszenie2;
                 hajstekst.text = "$" + kesz.ToString();
-                UpgradeKlikertekst.text = "$" + cena.ToString();
+                UpgradeKlikertekst.text = "$" + cena1.ToString();
+			   }
+          
+           }
+           public void UpgradeCps1(){
+
+               if(kesz >= cena2){
+                GameObject.Find("Scriptmanager").GetComponent<klikerScript>().kesz -= cena2;
+                GameObject.Find("Scriptmanager").GetComponent<CPS>().ZarobekNaTick += 0.2;
+                cena2 = cena2 * ulepszenie2;
+                hajstekst.text = "$" + kesz.ToString();
+                UpgradeCpstext.text = "$" + cena2.ToString();
 			   }
           
            }
