@@ -10,9 +10,20 @@ using System;
           public double kesz = 0;
           public double zarobekPoKliku = 1;
           public void Kliker(){    
-              kesz += zarobekPoKliku;             
+              kesz += zarobekPoKliku;
           }
-          public void Update(){           
+          public void Update(){ 
+              if (kesz < 1000)
               hajstekst.text = "$" + Math.Round(kesz, 2).ToString();
+              else if (kesz >= 1000 && kesz < 1000000)
+              hajstekst.text = "$" + Math.Round(kesz / 1000, 2).ToString() + "K";
+              else if (kesz >= 1000000 && kesz < 1000000000)
+              hajstekst.text = "$" + Math.Round(kesz / 1000000, 2).ToString() + "M";
+              else if (kesz >= 1000000000 && kesz < 1000000000000)
+              hajstekst.text = "$" + Math.Round(kesz / 1000000000, 2).ToString() + "B";
+              else if (kesz >= 1000000000000 && kesz < 1000000000000000)
+              hajstekst.text = "$" + Math.Round(kesz / 1000000000000, 2).ToString() + "T";
+              if (kesz > 1000)
+              kesz = Math.Round(kesz, 2);
           }
   }
