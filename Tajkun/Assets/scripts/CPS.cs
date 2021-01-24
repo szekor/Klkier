@@ -11,7 +11,7 @@ public class CPS : MonoBehaviour
  public Text ZPTtekst; 
 
     void Update(){
-    ZPTtekst.text = ZarobekNaTick + "/s";
+    ZPTtekst.text = ZarobekNaTick*10 + "/s";
     Tick = GameObject.Find("Scriptmanager").GetComponent<TimeTickSystem>().tick;
     if (Tick > tickzapisany)
     {   
