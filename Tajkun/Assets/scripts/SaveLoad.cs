@@ -24,7 +24,7 @@
           CurrentZPT = GameObject.Find("Scriptmanager").GetComponent<CPS>().ZarobekNaTick;
           }
           
-         void Start(){}     
+         void Start(){LoadFile();}     
 
          public void SaveFile()
          {
