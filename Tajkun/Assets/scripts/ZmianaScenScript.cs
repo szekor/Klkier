@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ZmianaScenScript : MonoBehaviour
-{    public GameObject kliker, UpgradeKlikera, UpgradeCPS, UpgradeCps2, UpgradeCps3;
+{    public GameObject kliker, UpgradeKlikera, UpgradeCPS, UpgradeCps2, UpgradeCps3, UpgradeCps4;
      public int tak = 0;
      void Update()
      {
@@ -15,6 +15,7 @@ public class ZmianaScenScript : MonoBehaviour
             UpgradeCPS.SetActive (false);
             UpgradeCps2.SetActive (false);
             UpgradeCps3.SetActive (false);
+            UpgradeCps4.SetActive (false);
 	     }
      //CPS
         if (tak == 1)
@@ -24,6 +25,7 @@ public class ZmianaScenScript : MonoBehaviour
             UpgradeCPS.SetActive (true);
             UpgradeCps2.SetActive (true);
             UpgradeCps3.SetActive (true);
+            UpgradeCps4.SetActive (true);
 	     }
          //KLIKER
          if (tak == 0)
@@ -33,6 +35,7 @@ public class ZmianaScenScript : MonoBehaviour
             UpgradeCPS.SetActive (false);
             UpgradeCps2.SetActive (false);
             UpgradeCps3.SetActive (false);
+            UpgradeCps4.SetActive (false);
 	     }
     }
 
