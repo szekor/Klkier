@@ -14,7 +14,7 @@ using System;
           }
           public void Update(){ 
               if (kesz < 1000)
-              hajstekst.text = "$" + Math.Round(kesz, 2).ToString();
+              hajstekst.text = "$" + Math.Round(kesz, 0).ToString();
               else if (kesz >= 1000 && kesz < 1000000)
               hajstekst.text = "$" + Math.Round(kesz / 1000, 2).ToString() + "K";
               else if (kesz >= 1000000 && kesz < 1000000000)

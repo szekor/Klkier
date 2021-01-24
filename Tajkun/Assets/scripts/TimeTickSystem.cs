@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using System;
 public class TimeTickSystem : MonoBehaviour
 {
-  private const float TICK_TIMER_MAX =  0.2f;
+  private const float TICK_TIMER_MAX =  0.1f;
   public Text liczbatickow;
   public int tick;
   private float tickTimer; 
