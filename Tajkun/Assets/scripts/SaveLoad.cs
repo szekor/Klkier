@@ -5,7 +5,8 @@
      using System;
 
      public class SaveLoad : MonoBehaviour 
-     {   public int Roznica;
+     {   public Text ZabicieTekst;
+         public int Roznica;
          public double CurrentHajs;
          public double CurrentCena1;
          public double CurrentCena2;
@@ -34,6 +35,8 @@
          GameObject.Find("Scriptmanager").GetComponent<PoZabiciu>().CzasAktualny = (int)(DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalSeconds;
          Roznica = GameObject.Find("Scriptmanager").GetComponent<PoZabiciu>().CzasAktualny - GameObject.Find("Scriptmanager").GetComponent<PoZabiciu>().CzasZapisany;
          GameObject.Find("Scriptmanager").GetComponent<klikerScript>().kesz += (Roznica * (GameObject.Find("Scriptmanager").GetComponent<CPS>().ZarobekNaTick * 10));
+         GameObject.Find("Scriptmanager").GetComponent<ZmianaScenScript>().tak = 3;
+         ZabicieTekst.text = "While Game Was Closed You Earned: $" + (Roznica * (GameObject.Find("Scriptmanager").GetComponent<CPS>().ZarobekNaTick * 10)).ToString();
          }     
 
          public void SaveFile()
