@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class CPS : MonoBehaviour
 {
  public double ZarobekNaTick = 0;
- public int Tick, tickzapisany = 0, tickzapisany2 = 0;
+ public int Tick, tickzapisany = 0, tickzapisany2 = 0, tickzapisany3 = 0;
  public Text ZPTtekst; 
 
     void Update(){
@@ -22,8 +22,12 @@ public class CPS : MonoBehaviour
     else if (Tick >= (tickzapisany2 + 10))
     {   
         GameObject.Find("Scriptmanager").GetComponent<SaveLoad>().SaveFile();
-        //save();
         tickzapisany2 = Tick;
+    }
+    else if (Tick >= (tickzapisany3 + 10))
+    {          
+        tickzapisany3 = Tick;
+        GameObject.Find("Scriptmanager").GetComponent<PoZabiciu>().CzasZapisany = GameObject.Find("Scriptmanager").GetComponent<PoZabiciu>().CzasAktualny;
     }
   }
 }
