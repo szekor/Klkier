@@ -12,12 +12,16 @@ using System;
           public Text UpgradeCps2text;
           public Text UpgradeCps3text;
           public Text UpgradeCps4text;
+          public Text UpgradeCps5text;
+          public Text UpgradeCps6text;
           double ulepszenie = 1.2;
           public double cena1 = 50;
           public double cena2 = 10;
           public double cena3 = 100;
           public double cena4 = 1100;
           public double cena5 = 12000;
+          public double cena6 = 130000;
+          public double cena7 = 1400000;
           public double kesz;
           public double ZarobekPoKliku = 1;
           public double UlepszenieZarobekNaTick = 0.1;
@@ -31,6 +35,8 @@ using System;
           cena3 = Math.Round(cena3, 2);
           cena4 = Math.Round(cena4, 2);
           cena5 = Math.Round(cena5, 2);
+          cena6 = Math.Round(cena6, 2);
+          cena7 = Math.Round(cena7, 2);
                 if (cena1 < 1000)
                 UpgradeKlikertekst.text = "$" +  Math.Round(cena1, 0).ToString();
                 if (cena1 >= 1000 && cena1 < 1000000)
@@ -82,6 +88,28 @@ using System;
                 if (cena5 >= 1000000000000 && cena5 < 1000000000000000)
                 UpgradeCps4text.text = "$" +  Math.Round(cena5 / 1000000000000, 2).ToString() + "T";
 
+                if (cena6 < 1000)
+                UpgradeCps5text.text = "$" +  Math.Round(cena6, 0).ToString();
+                if (cena6 >= 1000 && cena6 < 1000000)
+                UpgradeCps5text.text = "$" +  Math.Round(cena6 / 1000, 2).ToString() + "K";
+                if (cena6 >= 1000000 && cena6 < 1000000000)
+                UpgradeCps5text.text = "$" +  Math.Round(cena6 / 1000000, 2).ToString() + "M";
+                if (cena6 >= 1000000000 && cena6 < 1000000000000)
+                UpgradeCps5text.text = "$" +  Math.Round(cena6 / 1000000000, 2).ToString() + "B";
+                if (cena6 >= 1000000000000 && cena6 < 1000000000000000)
+                UpgradeCps5text.text = "$" +  Math.Round(cena6 / 1000000000000, 2).ToString() + "T";
+
+                if (cena7 < 1000)
+                UpgradeCps6text.text = "$" +  Math.Round(cena7, 0).ToString();
+                if (cena7 >= 1000 && cena7 < 1000000)
+                UpgradeCps6text.text = "$" +  Math.Round(cena7 / 1000, 2).ToString() + "K";
+                if (cena7 >= 1000000 && cena7 < 1000000000)
+                UpgradeCps6text.text = "$" +  Math.Round(cena7 / 1000000, 2).ToString() + "M";
+                if (cena7 >= 1000000000 && cena7 < 1000000000000)
+                UpgradeCps6text.text = "$" +  Math.Round(cena7 / 1000000000, 2).ToString() + "B";
+                if (cena7 >= 1000000000000 && cena7 < 1000000000000000)
+                UpgradeCps6text.text = "$" +  Math.Round(cena7 / 1000000000000, 2).ToString() + "T";
+
          }
           public void UpgradeKlikera(){
 
@@ -127,16 +155,25 @@ using System;
                if(kesz >= cena5){
                 GameObject.Find("Scriptmanager").GetComponent<klikerScript>().kesz -= cena5;
                 GameObject.Find("Scriptmanager").GetComponent<CPS>().ZarobekNaTick += 7;
-                cena5 = cena5 * ulepszenie;
+                cena5 = cena5 * ulepszenie; }}
                 
- 
+                public void UpgradeCps5(){
 
-			   }
-           
+                if(kesz >= cena6){
+                GameObject.Find("Scriptmanager").GetComponent<klikerScript>().kesz -= cena6;
+                GameObject.Find("Scriptmanager").GetComponent<CPS>().ZarobekNaTick += 75;
+                cena6 = cena6 * ulepszenie;  }}
+                
+                public void UpgradeCps6(){
+
+                if(kesz >= cena7){
+                GameObject.Find("Scriptmanager").GetComponent<klikerScript>().kesz -= cena7;
+                GameObject.Find("Scriptmanager").GetComponent<CPS>().ZarobekNaTick += 1000;
+                cena7 = cena7 * ulepszenie;  }}
 
 		  
      
      
      
      
-     }}
+     }
