@@ -30,43 +30,43 @@ using System;
           kesz = GameObject.Find("Scriptmanager").GetComponent<klikerScript>().kesz;
           ZarobekPoKliku = Math.Round(ZarobekPoKliku, 2);  
 		  GameObject.Find("Scriptmanager").GetComponent<klikerScript>().zarobekPoKliku = ZarobekPoKliku;
-          cena1 = Math.Round(cena1, 2);
-          cena2 = Math.Round(cena2, 2);
-          cena3 = Math.Round(cena3, 2);
-          cena4 = Math.Round(cena4, 2);
-          cena5 = Math.Round(cena5, 2);
-          cena6 = Math.Round(cena6, 2);
-          cena7 = Math.Round(cena7, 2);
-                if (cena1 < 1000)
+          cena1 = Math.Round(cena1, 1);
+          cena2 = Math.Round(cena2, 1);
+          cena3 = Math.Round(cena3, 1);
+          cena4 = Math.Round(cena4, 1);
+          cena5 = Math.Round(cena5, 1);
+          cena6 = Math.Round(cena6, 1);
+          cena7 = Math.Round(cena7, 1);
+               if (cena1 < 1000)
                 UpgradeKlikertekst.text = "$" +  Math.Round(cena1, 0).ToString();
                 if (cena1 >= 1000 && cena1 < 1000000)
-                UpgradeKlikertekst.text = "$" +  Math.Round(cena1 / 1000, 2).ToString() + "K";
+                UpgradeKlikertekst.text = "$" +  Math.Round(cena1 / 1000, 1).ToString() + "K";
                 if (cena1 >= 1000000 && cena1 < 1000000000)
-                UpgradeKlikertekst.text = "$" +  Math.Round(cena1 / 1000000, 2).ToString() + "M";
+                UpgradeKlikertekst.text = "$" +  Math.Round(cena1 / 1000000, 1).ToString() + "M";
                 if (cena1 >= 1000000000 && cena1 < 1000000000000)
-                UpgradeKlikertekst.text = "$" +  Math.Round(cena1 / 1000000000, 2).ToString() + "B";
+                UpgradeKlikertekst.text = "$" +  Math.Round(cena1 / 1000000000, 1).ToString() + "B";
                 if (cena1 >= 1000000000000 && cena1 < 1000000000000000)
-                UpgradeKlikertekst.text = "$" +  Math.Round(cena1 / 1000000000000, 2).ToString() + "T";
+                UpgradeKlikertekst.text = "$" +  Math.Round(cena1 / 1000000000000, 1).ToString() + "T";
                 if (cena2 < 1000)
                 UpgradeCpstext.text = "$" +  Math.Round(cena2, 0).ToString();
                 if (cena2 >= 1000 && cena2 < 1000000)
-                UpgradeCpstext.text = "$" +  Math.Round(cena2 / 1000, 2).ToString() + "K";
+                UpgradeCpstext.text = "$" +  Math.Round(cena2 / 1000, 1).ToString() + "K";
                 if (cena2 >= 1000000 && cena2 < 1000000000)
-                UpgradeCpstext.text = "$" +  Math.Round(cena2 / 1000000, 2).ToString() + "M";
+                UpgradeCpstext.text = "$" +  Math.Round(cena2 / 1000000, 1).ToString() + "M";
                 if (cena2 >= 1000000000 && cena2 < 1000000000000)
-                UpgradeCpstext.text = "$" +  Math.Round(cena2 / 1000000000, 2).ToString() + "B";
+                UpgradeCpstext.text = "$" +  Math.Round(cena2 / 1000000000, 1).ToString() + "B";
                 if (cena2 >= 1000000000000 && cena2 < 1000000000000000)
-                UpgradeCpstext.text = "$" +  Math.Round(cena2 / 1000000000000, 2).ToString() + "T";
+                UpgradeCpstext.text = "$" +  Math.Round(cena2 / 1000000000000, 1).ToString() + "T";
                 if (cena3 < 1000)
                 UpgradeCps2text.text = "$" +  Math.Round(cena3, 0).ToString();
                 if (cena3 >= 1000 && cena3 < 1000000)
-                UpgradeCps2text.text = "$" +  Math.Round(cena3 / 1000, 2).ToString() + "K";
+                UpgradeCps2text.text = "$" +  Math.Round(cena3 / 1000, 1).ToString() + "K";
                 if (cena3 >= 1000000 && cena3 < 1000000000)
-                UpgradeCps2text.text = "$" +  Math.Round(cena3 / 1000000, 2).ToString() + "M";
+                UpgradeCps2text.text = "$" +  Math.Round(cena3 / 1000000, 1).ToString() + "M";
                 if (cena3 >= 1000000000 && cena3 < 1000000000000)
-                UpgradeCps2text.text = "$" +  Math.Round(cena3 / 1000000000, 2).ToString() + "B";
+                UpgradeCps2text.text = "$" +  Math.Round(cena3 / 1000000000, 1).ToString() + "B";
                 if (cena3 >= 1000000000000 && cena3 < 1000000000000000)
-                UpgradeCps2text.text = "$" +  Math.Round(cena3 / 1000000000000, 2).ToString() + "T";
+                UpgradeCps2text.text = "$" +  Math.Round(cena3 / 1000000000000, 1).ToString() + "T";
                 if (cena4 < 1000)
                 UpgradeCps3text.text = "$" +  Math.Round(cena4, 0).ToString();
                 if (cena4 >= 1000 && cena4 < 1000000)
@@ -80,35 +80,35 @@ using System;
                 if (cena5 < 1000)
                 UpgradeCps4text.text = "$" +  Math.Round(cena5, 0).ToString();
                 if (cena5 >= 1000 && cena5 < 1000000)
-                UpgradeCps4text.text = "$" +  Math.Round(cena5 / 1000, 2).ToString() + "K";
+                UpgradeCps4text.text = "$" +  Math.Round(cena5 / 1000, 1).ToString() + "K";
                 if (cena5 >= 1000000 && cena5 < 1000000000)
-                UpgradeCps4text.text = "$" +  Math.Round(cena5 / 1000000, 2).ToString() + "M";
+                UpgradeCps4text.text = "$" +  Math.Round(cena5 / 1000000, 1).ToString() + "M";
                 if (cena5 >= 1000000000 && cena5 < 1000000000000)
-                UpgradeCps4text.text = "$" +  Math.Round(cena5 / 1000000000, 2).ToString() + "B";
+                UpgradeCps4text.text = "$" +  Math.Round(cena5 / 1000000000, 1).ToString() + "B";
                 if (cena5 >= 1000000000000 && cena5 < 1000000000000000)
-                UpgradeCps4text.text = "$" +  Math.Round(cena5 / 1000000000000, 2).ToString() + "T";
+                UpgradeCps4text.text = "$" +  Math.Round(cena5 / 1000000000000, 1).ToString() + "T";
 
                 if (cena6 < 1000)
                 UpgradeCps5text.text = "$" +  Math.Round(cena6, 0).ToString();
                 if (cena6 >= 1000 && cena6 < 1000000)
-                UpgradeCps5text.text = "$" +  Math.Round(cena6 / 1000, 2).ToString() + "K";
+                UpgradeCps5text.text = "$" +  Math.Round(cena6 / 1000, 1).ToString() + "K";
                 if (cena6 >= 1000000 && cena6 < 1000000000)
-                UpgradeCps5text.text = "$" +  Math.Round(cena6 / 1000000, 2).ToString() + "M";
+                UpgradeCps5text.text = "$" +  Math.Round(cena6 / 1000000, 1).ToString() + "M";
                 if (cena6 >= 1000000000 && cena6 < 1000000000000)
-                UpgradeCps5text.text = "$" +  Math.Round(cena6 / 1000000000, 2).ToString() + "B";
+                UpgradeCps5text.text = "$" +  Math.Round(cena6 / 1000000000, 1).ToString() + "B";
                 if (cena6 >= 1000000000000 && cena6 < 1000000000000000)
-                UpgradeCps5text.text = "$" +  Math.Round(cena6 / 1000000000000, 2).ToString() + "T";
+                UpgradeCps5text.text = "$" +  Math.Round(cena6 / 1000000000000, 1).ToString() + "T";
 
                 if (cena7 < 1000)
                 UpgradeCps6text.text = "$" +  Math.Round(cena7, 0).ToString();
                 if (cena7 >= 1000 && cena7 < 1000000)
-                UpgradeCps6text.text = "$" +  Math.Round(cena7 / 1000, 2).ToString() + "K";
+                UpgradeCps6text.text = "$" +  Math.Round(cena7 / 1000, 1).ToString() + "K";
                 if (cena7 >= 1000000 && cena7 < 1000000000)
-                UpgradeCps6text.text = "$" +  Math.Round(cena7 / 1000000, 2).ToString() + "M";
+                UpgradeCps6text.text = "$" +  Math.Round(cena7 / 1000000, 1).ToString() + "M";
                 if (cena7 >= 1000000000 && cena7 < 1000000000000)
-                UpgradeCps6text.text = "$" +  Math.Round(cena7 / 1000000000, 2).ToString() + "B";
+                UpgradeCps6text.text = "$" +  Math.Round(cena7 / 1000000000, 1).ToString() + "B";
                 if (cena7 >= 1000000000000 && cena7 < 1000000000000000)
-                UpgradeCps6text.text = "$" +  Math.Round(cena7 / 1000000000000, 2).ToString() + "T";
+                UpgradeCps6text.text = "$" +  Math.Round(cena7 / 1000000000000, 1).ToString() + "T";
 
          }
           public void UpgradeKlikera(){
