@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using UnityEngine.iOS;
 
 public class klikerScript : MonoBehaviour
 {
@@ -37,17 +38,16 @@ public class klikerScript : MonoBehaviour
           }
     public void onclickevent()
     {
-        if (Input.touchCount > 0)
-        {
+        
             Touch touch = Input.GetTouch(0);
             Vector2 touchPos = Camera.main.ScreenToWorldPoint(touch.position);
             if (touch.phase == TouchPhase.Began)
             {
-
+            
                 Instantiate(Particle, touchPos, Quaternion.identity);
                 Instantiate(Popup, touchPos, Quaternion.identity); Debug.Log("pop");
             }
-        }
+        
 
     }
   }
