@@ -22,7 +22,9 @@ using System;
                 {
                 Touch touch = Input.GetTouch(0);
                 Instantiate(Particle, touch.position, Quaternion.identity);
-                Instantiate(Popup, touch.position, Quaternion.identity);} 
+            Debug.Log("zrespiono partikla");
+                Instantiate(Popup, touch.position, Quaternion.identity);}
+        Debug.Log("PopUp");
 
              if (kesz < 1000)
               hajstekst.text = "$" + Math.Round(kesz, 0).ToString();
