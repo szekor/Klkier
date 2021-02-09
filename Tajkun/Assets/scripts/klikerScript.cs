@@ -3,30 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
-      
-      public class klikerScript : MonoBehaviour
-      {
-          public GameObject Particle;
-          public Text Popup;
-          public Text hajstekst;
-          public double kesz = 0;
-          public double zarobekPoKliku = 1;
-          
-          public void Kliker(){    
-              kesz += zarobekPoKliku;
-              
-          }
-          public void Update(){              
-              Popup.text = zarobekPoKliku.ToString();
-              if (Input.touchCount > 0)
-                {
-                Touch touch = Input.GetTouch(0);
-                Instantiate(Particle, touch.position, Quaternion.identity);
-            Debug.Log("zrespiono partikla");
-                Instantiate(Popup, touch.position, Quaternion.identity);}
-        Debug.Log("PopUp");
 
-             if (kesz < 1000)
+public class klikerScript : MonoBehaviour
+{
+    public GameObject Particle;
+    public Text Popup;
+    public Text hajstekst;
+    public double kesz = 0;
+    public double zarobekPoKliku = 1;
+
+    public void Kliker() {
+        kesz += zarobekPoKliku;
+        Popup.text = zarobekPoKliku.ToString();
+
+
+    } 
+
+          public void Update(){
+
+
+
+        if (kesz < 1000)
               hajstekst.text = "$" + Math.Round(kesz, 0).ToString();
               else if (kesz >= 1000 && kesz < 1000000)
               hajstekst.text = "$" + Math.Round(kesz / 1000, 2).ToString() + "K";
@@ -40,3 +37,4 @@ using System;
               kesz = Math.Round(kesz, 2);
           }
   }
+    
