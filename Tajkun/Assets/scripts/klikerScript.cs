@@ -16,14 +16,7 @@ public class klikerScript : MonoBehaviour
     public void Kliker() {
         kesz += zarobekPoKliku;
         Popup.text = zarobekPoKliku.ToString();
-        Touch touch = Input.GetTouch(0);
-        Vector2 touchPos = Camera.main.ScreenToWorldPoint(touch.position);
-        if (touch.phase == TouchPhase.Began)
-        {
 
-            Instantiate(Particle, touchPos, Quaternion.identity);
-            Instantiate(Popup, touchPos, Quaternion.identity); Debug.Log("pop");
-        }
 
 
     } 
