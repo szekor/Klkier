@@ -36,6 +36,7 @@
          void Start()
          {
          LoadFile();
+         //LoadFile();
          GameObject.Find("Scriptmanager").GetComponent<PoZabiciu>().CzasAktualny = (int)(DateTime.UtcNow - new DateTime(1970, 1, 1)).TotalSeconds;
          Roznica = GameObject.Find("Scriptmanager").GetComponent<PoZabiciu>().CzasAktualny - GameObject.Find("Scriptmanager").GetComponent<PoZabiciu>().CzasZapisany;
          GameObject.Find("Scriptmanager").GetComponent<klikerScript>().kesz += (Roznica * (GameObject.Find("Scriptmanager").GetComponent<CPS>().ZarobekNaTick * 10));
